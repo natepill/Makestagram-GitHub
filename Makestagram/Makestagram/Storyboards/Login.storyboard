@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1pi-Aj-p7H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="UAJ-IW-CSG">
+            <objects>
+                <viewController id="1pi-Aj-p7H" customClass="LoginViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqM-n0-dC9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sw-uK-8yU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-4t-Pes">
+                                        <rect key="frame" x="68" y="81" width="240" height="103.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Makestagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAC-iS-qsN">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="36"/>
+                                                <color key="textColor" name="tcOffWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to see photos and videos from your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ul-sg-9aB">
+                                                <rect key="frame" x="0.0" y="68.5" width="240" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="yfY-D6-Je5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" name="tcOffWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="tcHotPink"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="0Yc-83-iPM"/>
+                                    <constraint firstItem="A3K-4t-Pes" firstAttribute="centerX" secondItem="6sw-uK-8yU" secondAttribute="centerX" id="cYj-aF-9kV"/>
+                                    <constraint firstItem="A3K-4t-Pes" firstAttribute="centerY" secondItem="6sw-uK-8yU" secondAttribute="centerY" id="md2-aF-yYX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-lU-jmv">
+                                <rect key="frame" x="35" y="290" width="305" height="44"/>
+                                <color key="backgroundColor" red="0.2196078431372549" green="0.59215686274509804" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tr3-Kr-bcT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Register or Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="1pi-Aj-p7H" eventType="touchUpInside" id="gvO-Sg-g25"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="tcOffWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wpg-7c-T0A" firstAttribute="trailing" secondItem="6sw-uK-8yU" secondAttribute="trailing" id="2dV-5U-5DL"/>
+                            <constraint firstItem="6sw-uK-8yU" firstAttribute="top" secondItem="hqM-n0-dC9" secondAttribute="top" id="3Uy-Fm-d8H"/>
+                            <constraint firstItem="Wpg-7c-T0A" firstAttribute="trailing" secondItem="nbW-lU-jmv" secondAttribute="trailing" constant="35" id="Lex-ac-449"/>
+                            <constraint firstItem="nbW-lU-jmv" firstAttribute="top" secondItem="6sw-uK-8yU" secondAttribute="bottom" constant="25" id="dex-wK-CQd"/>
+                            <constraint firstItem="nbW-lU-jmv" firstAttribute="leading" secondItem="Wpg-7c-T0A" secondAttribute="leading" constant="35" id="k6P-po-4ny"/>
+                            <constraint firstItem="6sw-uK-8yU" firstAttribute="leading" secondItem="Wpg-7c-T0A" secondAttribute="leading" id="lrN-ZS-Ihg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wpg-7c-T0A"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="nbW-lU-jmv" id="c62-yg-4O4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8x-BS-fDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="tcHotPink">
+            <color red="0.98000001910000001" green="0.32499998810000003" blue="0.52200001480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcOffWhite">
+            <color red="0.96899998190000003" green="0.96899998190000003" blue="0.96899998190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
