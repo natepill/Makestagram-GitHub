@@ -10,6 +10,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseUI
+import FirebaseDatabase
 
 typealias FIRUser = FirebaseAuth.User
 
@@ -46,9 +47,24 @@ extension LoginViewController: FUIAuthDelegate{
         if let error = error{
             assertionFailure("Error signing in: \(error.localizedDescription)")
             return
+            // LoginViewController conformed to the FUIAuthDelegate protocol. Basic error handling that will let us know if something went wrong.
         }
+        
+        guard  let user = user //user = (FIRUser?)user
+            else {return}
+        
+        let userRef = Database.database().reference().child("users").child(user.uid)
+        
+        userRef.observeSingleEvent(of: .value, with: {(snapshot) in
+  
+            if let user = User(snapshot: snapshot) {
+                print("welcome back \(user.username)!")
+            }else{
+                print("New User!")
+            }
+                      //Retrieve the user data from DataSnapshot, we check that the snapshot exists, and that it is of the expected Dictionary type
+        })
         print("handle user signup / login")
-        // LoginViewController conformed to the FUIAuthDelegate protocol. Basic error handling that will let us know if something went wrong.
     }
 }
 

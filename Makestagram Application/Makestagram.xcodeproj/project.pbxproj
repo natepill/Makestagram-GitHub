@@ -10,6 +10,7 @@
 		3995351420F4017D0093A459 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3995351320F4017C0093A459 /* GoogleService-Info.plist */; };
 		3995352020F413BA0093A459 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3995351F20F413BA0093A459 /* Login.storyboard */; };
 		3995352420F416200093A459 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352320F416200093A459 /* LoginViewController.swift */; };
+		3995352620F695F30093A459 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352520F695F30093A459 /* User.swift */; };
 		39B7BAF420F3C0FC00D7CDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B7BAF320F3C0FC00D7CDB1 /* AppDelegate.swift */; };
 		39B7BAF620F3C0FC00D7CDB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B7BAF520F3C0FC00D7CDB1 /* ViewController.swift */; };
 		39B7BAF920F3C0FC00D7CDB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B7BAF720F3C0FC00D7CDB1 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		3995351320F4017C0093A459 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Makestagram/Supporting/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3995351F20F413BA0093A459 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3995352320F416200093A459 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3995352520F695F30093A459 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		39B7BAF020F3C0FC00D7CDB1 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B7BAF320F3C0FC00D7CDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B7BAF520F3C0FC00D7CDB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		3995351820F4083F0093A459 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3995352520F695F30093A459 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3995352620F695F30093A459 /* User.swift in Sources */,
 				3995352420F416200093A459 /* LoginViewController.swift in Sources */,
 				39B7BAF620F3C0FC00D7CDB1 /* ViewController.swift in Sources */,
 				39B7BAF420F3C0FC00D7CDB1 /* AppDelegate.swift in Sources */,
