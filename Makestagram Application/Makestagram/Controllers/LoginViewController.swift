@@ -60,7 +60,7 @@ extension LoginViewController: FUIAuthDelegate{
             if let user = User(snapshot: snapshot) {
                 print("welcome back \(user.username)!")
             }else{
-                print("New User!")
+                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
             }
                       //Retrieve the user data from DataSnapshot, we check that the snapshot exists, and that it is of the expected Dictionary type
         })
