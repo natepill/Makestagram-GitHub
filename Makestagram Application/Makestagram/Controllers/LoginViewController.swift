@@ -64,9 +64,36 @@ extension LoginViewController: FUIAuthDelegate{
             }
                       //Retrieve the user data from DataSnapshot, we check that the snapshot exists, and that it is of the expected Dictionary type
         })
-        print("handle user signup / login")
+        userRef.observeSingleEvent(of: .value, with: {[unowned self]  (snapshot) in
+            if let _ = User(snapshot: snapshot){
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                
+                if let initialViewController = storyboard.instantiateInitialViewController(){
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                }
+            }else{
+                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+            }
+        })
+        // if we received an existing user on our login view controller, we also want to redirect them to the main storyboard by setting the window's root view controller.
+    
+    
+        userRef.observeSingleEvent(of: .value, with: {[unowned self] (snapshot) in
+            if let user = User(snapshot: snapshot){
+                User.setCurrent(user)
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            if let initialViewController = storyboard.instantiateInitialViewController(){
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            }
+        }else{
+              self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+        }
+        })
+    
+    
     }
 }
-
-
-
