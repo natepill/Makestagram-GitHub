@@ -49,8 +49,6 @@ class CreateUsernameViewController: UIViewController{
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             }
-
-
         }
         
         //            Create a new instance of our main storyboard

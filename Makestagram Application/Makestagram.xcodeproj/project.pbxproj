@@ -13,8 +13,11 @@
 		3995352620F695F30093A459 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352520F695F30093A459 /* User.swift */; };
 		3995352A20F6BE2E0093A459 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352920F6BE2E0093A459 /* CreateUsernameViewController.swift */; };
 		3995352C20F729570093A459 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352B20F729570093A459 /* UserService.swift */; };
+		3995352E20F7F4CF0093A459 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352D20F7F4CF0093A459 /* constants.swift */; };
+		3995353020F7F77C0093A459 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995352F20F7F77C0093A459 /* Storyboard+Utility.swift */; };
+		3995353220F88A600093A459 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995353120F88A600093A459 /* HomeViewController.swift */; };
+		3995353420F88A860093A459 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995353320F88A860093A459 /* FindFriendsViewController.swift */; };
 		39B7BAF420F3C0FC00D7CDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B7BAF320F3C0FC00D7CDB1 /* AppDelegate.swift */; };
-		39B7BAF620F3C0FC00D7CDB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B7BAF520F3C0FC00D7CDB1 /* ViewController.swift */; };
 		39B7BAF920F3C0FC00D7CDB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B7BAF720F3C0FC00D7CDB1 /* Main.storyboard */; };
 		39B7BAFB20F3C0FF00D7CDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B7BAFA20F3C0FF00D7CDB1 /* Assets.xcassets */; };
 		39B7BAFE20F3C0FF00D7CDB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B7BAFC20F3C0FF00D7CDB1 /* LaunchScreen.storyboard */; };
@@ -28,9 +31,12 @@
 		3995352520F695F30093A459 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3995352920F6BE2E0093A459 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		3995352B20F729570093A459 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		3995352D20F7F4CF0093A459 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		3995352F20F7F77C0093A459 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		3995353120F88A600093A459 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3995353320F88A860093A459 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		39B7BAF020F3C0FC00D7CDB1 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B7BAF320F3C0FC00D7CDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39B7BAF520F3C0FC00D7CDB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39B7BAF820F3C0FC00D7CDB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39B7BAFA20F3C0FF00D7CDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B7BAFD20F3C0FF00D7CDB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,9 +69,10 @@
 		3995351520F407600093A459 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				39B7BAF520F3C0FC00D7CDB1 /* ViewController.swift */,
 				3995352320F416200093A459 /* LoginViewController.swift */,
 				3995352920F6BE2E0093A459 /* CreateUsernameViewController.swift */,
+				3995353120F88A600093A459 /* HomeViewController.swift */,
+				3995353320F88A860093A459 /* FindFriendsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -73,6 +80,7 @@
 		3995351620F4081D0093A459 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3995352F20F7F77C0093A459 /* Storyboard+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			children = (
 				39B7BAFF20F3C0FF00D7CDB1 /* Info.plist */,
 				3995351320F4017C0093A459 /* GoogleService-Info.plist */,
+				3995352D20F7F4CF0093A459 /* constants.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -312,7 +321,10 @@
 				3995352620F695F30093A459 /* User.swift in Sources */,
 				3995352420F416200093A459 /* LoginViewController.swift in Sources */,
 				3995352C20F729570093A459 /* UserService.swift in Sources */,
-				39B7BAF620F3C0FC00D7CDB1 /* ViewController.swift in Sources */,
+				3995353220F88A600093A459 /* HomeViewController.swift in Sources */,
+				3995353020F7F77C0093A459 /* Storyboard+Utility.swift in Sources */,
+				3995353420F88A860093A459 /* FindFriendsViewController.swift in Sources */,
+				3995352E20F7F4CF0093A459 /* constants.swift in Sources */,
 				3995352A20F6BE2E0093A459 /* CreateUsernameViewController.swift in Sources */,
 				39B7BAF420F3C0FC00D7CDB1 /* AppDelegate.swift in Sources */,
 			);

@@ -53,47 +53,63 @@ extension LoginViewController: FUIAuthDelegate{
         guard  let user = user //user = (FIRUser?)user
             else {return}
         
-        let userRef = Database.database().reference().child("users").child(user.uid)
+ //       let userRef = Database.database().reference().child("users").child(user.uid)
         
-        userRef.observeSingleEvent(of: .value, with: {(snapshot) in
-  
-            if let user = User(snapshot: snapshot) {
-                print("welcome back \(user.username)!")
-            }else{
-                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
-            }
-                      //Retrieve the user data from DataSnapshot, we check that the snapshot exists, and that it is of the expected Dictionary type
-        })
-        userRef.observeSingleEvent(of: .value, with: {[unowned self]  (snapshot) in
-            if let _ = User(snapshot: snapshot){
-                let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                
-                if let initialViewController = storyboard.instantiateInitialViewController(){
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
-                }
-            }else{
-                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
-            }
-        })
+//        userRef.observeSingleEvent(of: .value, with: {(snapshot) in
+//
+//            if let user = User(snapshot: snapshot) {
+//                print("welcome back \(user.username)!")
+//            }else{
+//                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+//            }
+//                      //Retrieve the user data from DataSnapshot, we check that the snapshot exists, and that it is of the expected Dictionary type
+//        })
+        
+//        userRef.observeSingleEvent(of: .value, with: {[unowned self]  (snapshot) in
+//            if let _ = User(snapshot: snapshot){
+//                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//
+//                if let initialViewController = storyboard.instantiateInitialViewController(){
+//                    self.view.window?.rootViewController = initialViewController
+//                    self.view.window?.makeKeyAndVisible()
+//                }
+//            }else{
+//                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+//            }
+//        })
         // if we received an existing user on our login view controller, we also want to redirect them to the main storyboard by setting the window's root view controller.
     
     
-        userRef.observeSingleEvent(of: .value, with: {[unowned self] (snapshot) in
-            if let user = User(snapshot: snapshot){
+//        userRef.observeSingleEvent(of: .value, with: {[unowned self] (snapshot) in
+//            if let user = User(snapshot: snapshot){
+//                User.setCurrent(user)
+//
+//
+//            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//            if let initialViewController = storyboard.instantiateInitialViewController(){
+//                self.view.window?.rootViewController = initialViewController
+//                self.view.window?.makeKeyAndVisible()
+//            }
+//        }else{
+//              self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+//        }
+//        })
+        
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
                 User.setCurrent(user)
-            
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-            if let initialViewController = storyboard.instantiateInitialViewController(){
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
+                
+                
+            } else {
+                // handle new user
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
-        }else{
-              self.performSegue(withIdentifier: "toCreateUsername", sender: self)
         }
-        })
-    
     
     }
 }
